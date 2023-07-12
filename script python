@@ -1,0 +1,83 @@
+if a < b:
+print (str(a) " est plus petit que " + str(b))
+else :
+print (str(a) " est plus grand que " + str(b))
+
+*******************************************
+Sur linux which python
+
+*******************************************
+
+#!/usr/bin/python
+
+prenom=input('Veuillez entrer votre prénom; ')
+
+if prenom =='fil':
+        print ("Bonjour " + prenom)
+else :
+      	print('Je ne vous connais pas!')
+
+********************************************
+demander de l'aide sous python 'interactive mode' : help()
+modules
+
+import syslog
+syslog.syslog(1,'message de test')
+
+syslog.syslog(40 | 1 , 'test')
+
+*********************************************
+
+#!/usr/bin/python3
+
+import os
+import os.path
+import syslog
+
+path= "/etc/network/interfaces"
+
+if (os.path.isfile(path)):
+
+        print ('file exists')
+        syslog.syslog(1,'le fichier existe')
+
+
+else:
+        print ('file doesn\'t exists')
+        syslog.syslog(1,'le fichier n\'existe pas')
+
+********************************************
+#!/usr/bin/python
+
+import os
+import syslog
+
+if (os.access("/etc/NetworkManager/system-connections/enp0s3.nmconnection",os.F_OK)):
+  print("le fichier existe")
+else:
+  print("le fichier n'existe pas")
+  syslog.sylog(40 | 1,'Attention suppression du fichier réseau')
+
+********************************************
+
+#!/usr/bin/python3
+# utilise comme argument le chemin du fichier
+
+import os
+import os.path
+import syslog
+import sys
+
+path=sys.argv[1]
+
+if (os.path.isfile(path)):
+
+        print ('file exists')
+        syslog.syslog(1,'le fichier existe')
+
+
+else:
+        print ('file doesn\'t exists')
+        syslog.syslog(1,'le fichier n\'existe pas')
+    
+***********************************************
